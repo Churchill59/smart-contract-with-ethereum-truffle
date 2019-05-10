@@ -39,14 +39,14 @@ const App = {
     App.setStatus("New Star Owner is " + this.account + ".");
   },
 
-   // function called to show the starName
-  getStarNameFunc: async function() {
+  // Implement Task 4 Modify the front end of the DAPP
+  lookUp: async function (){
     const { lookUptokenIdToStarInfo } = this.meta.methods; // to be able to use the functions in your Smart Contract use destructuring to get the function to be call
-    const starid = document.getElementById("starid").value;
-    const starName = await lookUptokenIdToStarInfo(starid).call({ from: this.account });
-    const starNameRetrieved = document.getElementById('starNameRetrieved')
-    starNameRetrieved.innerHTML = starName
+    const tokenId = document.getElementById("lookid").value;
+    const starName = await lookUptokenIdToStarInfo(tokenId).call({ from: this.account });
+    App.setStatus("The star name ios " + starName + ".");
   }
+
 };
 
 window.App = App;

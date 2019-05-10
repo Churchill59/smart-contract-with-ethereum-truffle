@@ -2,8 +2,8 @@
 require('babel-register')
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = "surround inflict property BLBL";
-const infuraAPIKey = "2153v4ds354fvds3543";
+const mnemonic = "faculty XXXXXXX eagle";
+const infuraAPIKey = "310XXXXXXXXXXXXXXXXda2";
 
 module.exports = {
    networks: { 
@@ -19,8 +19,7 @@ module.exports = {
       return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/" + infuraAPIKey);
     },
     network_id: '4',
-    gas: 0,
-    gasPrice: 0,
+    from:'0x31a5ace709a7c32847157e6914E8437B972c6751'
   }
   },
 

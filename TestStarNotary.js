@@ -82,8 +82,8 @@ it('can add the star name and star symbol properly', async() => {
     let starId = 6;
     let user1 = accounts[1];
     await instance.createStar('awesome star', starId, {from: user1});
-    let tokenSymbol = await instance.tokensymbol.call()
-    let tokenName = await instance.tokenname.call()
+    let tokenSymbol = await instance.symbol.call()
+    let tokenName = await instance.name.call()
     console.log(tokenName)
     assert.equal(tokenName, 'Star Notary France');
     assert.equal(tokenSymbol, 'SNF');
